@@ -79,7 +79,7 @@ DECLARE
 BEGIN
   i:=y1;
   LOOP
-    IF EXISTS(select tablename from pg_tables where schemaname = 'public' and tablename = 'weather_' || i) then
+    IF EXISTS(select 1 from pg_tables where schemaname = 'public' and tablename = 'weather_' || i) then
       IF avg_temp ISNULL then
         avg_temp:= (SELECT averageTemperature(i))::numeric;
       ELSE

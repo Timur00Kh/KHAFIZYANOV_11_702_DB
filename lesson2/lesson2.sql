@@ -95,3 +95,4 @@ $$ LANGUAGE plpgsql;
 
 SELECT averageTemperature(1980, 1990);
 SELECT create_year_table(1987);
+
